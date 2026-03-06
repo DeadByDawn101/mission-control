@@ -10,12 +10,12 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  title: 'Mission Control',
+  title: 'RavenX Mission Control',
   description: 'OpenClaw Agent Orchestration Dashboard',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
-    title: 'Mission Control',
+    title: 'RavenX Mission Control',
   },
 }
 

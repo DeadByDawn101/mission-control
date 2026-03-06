@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useMissionControl } from '@/store'
+import { APP_NAME, APP_SHORT } from '@/lib/brand'
 import { useNavigateToPanel } from '@/lib/navigation'
 
 interface NavItem {
@@ -102,10 +103,10 @@ export function NavRail() {
         {/* Header: Logo + toggle */}
         <div className={`flex items-center shrink-0 ${sidebarExpanded ? 'px-3 py-3 gap-2.5' : 'flex-col py-3 gap-2'}`}>
           <div className="w-9 h-9 rounded-lg bg-primary flex items-center justify-center shrink-0">
-            <span className="text-primary-foreground font-bold text-xs">MC</span>
+            <span className="text-primary-foreground font-bold text-xs">{APP_SHORT}</span>
           </div>
           {sidebarExpanded && (
-            <span className="text-sm font-semibold text-foreground truncate flex-1">Mission Control</span>
+            <span className="text-sm font-semibold text-foreground truncate flex-1">{APP_NAME}</span>
           )}
           <button
             onClick={toggleSidebar}

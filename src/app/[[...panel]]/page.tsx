@@ -41,6 +41,7 @@ import { PromoBanner } from '@/components/layout/promo-banner'
 import { useWebSocket } from '@/lib/websocket'
 import { useServerEvents } from '@/lib/use-server-events'
 import { useMissionControl } from '@/store'
+import { APP_LOADING, APP_SHORT } from '@/lib/brand'
 
 export default function Home() {
   const router = useRouter()
@@ -135,11 +136,11 @@ export default function Home() {
       <div className="flex items-center justify-center min-h-screen">
         <div className="flex flex-col items-center gap-3">
           <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">MC</span>
+            <span className="text-primary-foreground font-bold text-sm">{APP_SHORT}</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-            <span className="text-sm text-muted-foreground">Loading Mission Control...</span>
+            <span className="text-sm text-muted-foreground">{APP_LOADING}</span>
           </div>
         </div>
       </div>

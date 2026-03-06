@@ -8,6 +8,7 @@ import { useNavigateToPanel } from '@/lib/navigation'
 import { ThemeToggle } from '@/components/ui/theme-toggle'
 import { DigitalClock } from '@/components/ui/digital-clock'
 import { APP_VERSION } from '@/lib/version'
+import { APP_NAME } from '@/lib/brand'
 
 interface SearchResult {
   type: string
@@ -136,7 +137,7 @@ export function HeaderBar() {
       {/* Left: Page title + breadcrumb */}
       <div className="flex items-center gap-3">
         <h1 className="text-sm font-semibold text-foreground">
-          {tabLabels[activeTab] || 'Mission Control'}
+          {tabLabels[activeTab] || APP_NAME}
         </h1>
         <span className="text-2xs text-muted-foreground font-mono-tight">
           v{APP_VERSION}
